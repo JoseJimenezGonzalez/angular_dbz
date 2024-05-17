@@ -1,0 +1,9 @@
+<h3>Listado de personajes</h3>
+<ul>
+    <div *ngFor="let character of characterList; let i = index">
+        <li>
+            {{i + 1}}. {{character.name}} - {{character.power}}
+        </li>
+        <button (click)="emitId(character.id)">Eliminar personaje</button>
+    </div>
+</ul>
